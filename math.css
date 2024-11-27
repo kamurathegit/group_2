@@ -1,0 +1,133 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Keeps video behind content */
+}
+
+body {
+  background-image: url("../images/about.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    color: #fff; 
+    font-family: Arial, sans-serif;
+
+  font-family: 'Arial', sans-serif;
+  color: #18a3c5;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:inherit;
+  justify-content:flex-end;
+  height: 85vh;
+  overflow: hidden;
+}
+
+/* Main Content Styles */
+.content {
+  text-align: center;
+  z-index: 1; /* Ensures content is above the video */
+}
+
+/* Animated Heading */
+.animated-text {
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #61dafb, #eff6f9, #61dafb);
+  background-size: 300%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientAnimation 4s infinite linear;
+  margin-bottom: 20px;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Paragraph Style */
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #9690c0;
+}
+.start {
+  display:flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+.start-btn {
+  background-color:#61dafb;
+  color: #282c34;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: rgba(33, 161, 241, 0.8);
+  transform: scale(1.1);
+}
+
+
+/* Difficulty Levels */
+.difficulty-levels {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Difficulty Button Styles */
+.difficulty-btn {
+  background-color: rgba(97, 218, 251, 0.8);
+  color: #282c34;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.difficulty-btn:hover {
+  background-color: rgba(33, 161, 241, 0.8);
+  transform: scale(1.1);
+}
+
+.difficulty-btn:active {
+  background-color: rgba(29, 139, 193, 0.8);
+}
+footer nav a {
+  color: #007BFF; /* Change to your desired color */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+footer nav a:hover {
+  color: #9bbde2; /* Optional: color change on hover */
+}

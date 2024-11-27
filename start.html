@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>START!</title>
+  <link rel="stylesheet" href="start.css">
+</head>
+<body>
+    
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="Start.mp4" type="video/mp4" >
+    </video> 
+
+    <div id="difficulty-selection">
+        <h1 class="animated-text">Select Difficulty</h1>
+        <button class="difficulty-btn" onclick="startGame('easy')">Easy</button>
+        <button class="difficulty-btn" onclick="startGame('medium')">Medium</button>
+        <button class="difficulty-btn" onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div id="name-input" style="display:none;">
+        <h2 class="animated-text">Enter Your Name</h2>
+        <input class="textbox-14" type="text" id="player-name" placeholder="Your Name">
+        <button class="difficulty-btn" onclick="submitName()">Start Quiz</button>
+    </div>
+
+    <div id="quiz" style="display:none;">
+        <h2 class="animated-text" id="question-text"></h2>
+        <div id="timer">Time left: <span id="time-remaining"></span></div>
+        <div class="animated-text" id="options"></div>
+        <button class="difficulty-btn" onclick="submitAnswer()">Submit Answer</button>
+        <p id="feedback" style="display: none; font-weight: bold;"></p>
+    </div>
+
+    <div id="results" style="display:none;">
+        <h2 class="animated-text">Quiz Results</h2>
+        <div class="summary" id="score-summary"></div>
+        <button class="difficulty-btn" onclick="restartGame()">Play Again</button>
+        <button class="difficulty-btn" onclick="changeDifficulty()">Change Difficulty</button>
+    </div>
+
+    <script src="math.js"></script>
+</body>
+</html>
